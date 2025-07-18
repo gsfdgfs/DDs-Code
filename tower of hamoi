@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+void TOH(int n,char src,char aus,char dest){
+    if(n==1){
+        cout<<"move"<<src<<"to"<<dest;
+    }
+    else{
+    TOH(n-1,src,dest,aus);
+    TOH(1,src,aus,dest);
+    TOH(n-1,aus,src,dest);
+    }
+}
+int main(){
+    int n;
+    cout<<"enter number of disk:";
+    cin>>n;
+    TOH(n,'A','B','C');
+    return 0;
+}    
