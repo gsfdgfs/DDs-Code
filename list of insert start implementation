@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+struct Node{
+    int data;
+    Node *next;
+};
+Node*head=NULL;
+
+void insertstart(int num){
+    Node* newNode = new Node();
+    newNode->data = num;
+    newNode->next = head;
+    head=newNode;
+    cout<<num<<"insert at start"<<endl;
+    }
+    
+int main(){
+    insertstart(10);
+    insertstart(20);
+    insertstart(30);
+    insertstart(40);
+    insertstart(50);
+    insertstart(60);
+    
+}    
